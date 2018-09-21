@@ -1,3 +1,5 @@
+;(function() {
+
 var get = Ember.get;
 var getOwner = Ember.getOwner;
 var Promise = Ember.RSVP.Promise;
@@ -116,3 +118,5 @@ function lookupFastBoot(context) {
   var container = getOwner ? getOwner(context) : context.container;
   return container.lookup('service:fastboot');
 }
+
+})();
